@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
 
         Feature::create([
             'image' => 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png',
-            'route_name' => 'feature1.index',
+            'route_name' => 'bmi.index',
             'name' => 'BMI Calculator',
             'description' => 'Calculate BMI index according to the information',
             'required_credits' => 1,
@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
 
         Feature::create([
             'image' => 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png',
-            'route_name' => 'feature1.index',
+            'route_name' => 'ppi.index',
             'name' => 'PPI Calculator',
             'description' => 'Calculate PPI according to the information',
             'required_credits' => 4,
