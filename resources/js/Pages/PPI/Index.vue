@@ -43,7 +43,7 @@ const submit = () => {
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.width"
-                    placeholder="width"
+                    placeholder="Width"
                     autofocus
                     autocomplete="width"
                 />
@@ -60,7 +60,6 @@ const submit = () => {
                     class="mt-1 block w-full"
                     v-model="form.height"
                     placeholder="Height"
-                    autofocus
                     autocomplete="height"
                 />
 
@@ -76,7 +75,6 @@ const submit = () => {
                     class="mt-1 block w-full"
                     v-model="form.diagonal"
                     placeholder="Diagonal"
-                    autofocus
                     autocomplete="diagonal"
                 />
 

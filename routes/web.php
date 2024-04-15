@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BmiCalculatorController;
+use App\Http\Controllers\CreditController;
 use App\Http\Controllers\PpiCalculatorController;
 
 Route::get('/', function () {
@@ -29,6 +30,9 @@ Route::middleware('auth')->group(function () {
     Route::post('bmi/calculate', [BmiCalculatorController::class, 'calculate'])->name('bmi.calculate');
     Route::get('ppi/index', [PpiCalculatorController::class, 'index'])->name('ppi.index');
     Route::post('ppi/calculate', [PpiCalculatorController::class, 'calculate'])->name('ppi.calculate');
+
+
+    Route::get('credit/index',[CreditController::class, 'index'])->name('credit.index');
 });
 
 require __DIR__.'/auth.php';
