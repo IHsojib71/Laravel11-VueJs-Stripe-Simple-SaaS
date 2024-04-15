@@ -36,6 +36,18 @@ class BmiCalculatorController extends Controller
         //calculation
         $bmi =round((float)$valid['weight'] / ((float)$valid['height'] * (float)$valid['height']),2);
 
+        if($bmi < 18.5){
+            $bmi = $bmi . ' (Underweight)';
+        } else if ($bmi >= 18.5 && $bmi <24.9) {
+            $bmi = $bmi . ' (Normal weight)';
+        }
+        else if ($bmi >= 25 && $bmi <29.9) {
+            $bmi = $bmi . ' (Overweight )';
+        }
+        else if ($bmi >= 30) {
+            $bmi = $bmi . ' (Overweight )';
+        }
+
         $user->decreaseCredits($this->feature->required_credits);
 
         UsedFeature::create([
