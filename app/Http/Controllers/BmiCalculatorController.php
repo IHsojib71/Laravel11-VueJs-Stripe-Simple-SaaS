@@ -34,7 +34,7 @@ class BmiCalculatorController extends Controller
         $valid = $request->validated();
 
         //calculation
-        $bmi = (float)$valid['weight'] / ((float)$valid['height'] * (float)$valid['height']);
+        $bmi =round((float)$valid['weight'] / ((float)$valid['height'] * (float)$valid['height']),2);
 
         $user->decreaseCredits($this->feature->required_credits);
 
