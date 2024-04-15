@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\BmiCalculatorController;
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BmiCalculatorController;
+use App\Http\Controllers\PpiCalculatorController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -26,7 +27,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('bmi/index', [BmiCalculatorController::class, 'index'])->name('bmi.index');
     Route::post('bmi/calculate', [BmiCalculatorController::class, 'calculate'])->name('bmi.calculate');
-
+    Route::get('ppi/index', [PpiCalculatorController::class, 'index'])->name('ppi.index');
+    Route::post('ppi/calculate', [PpiCalculatorController::class, 'calculate'])->name('ppi.calculate');
 });
 
 require __DIR__.'/auth.php';

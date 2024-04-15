@@ -36,6 +36,9 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('bmi.index')" :active="route().current('bmi.*')">
                                     BMI Calculator
                                 </NavLink>
+                                <NavLink :href="route('ppi.index')" :active="route().current('ppi.*')">
+                                    PPI Calculator
+                                </NavLink>
                             </div>
                         </div>
 
@@ -131,6 +134,9 @@ const showingNavigationDropdown = ref(false);
                         </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('bmi.index')" :active="route().current('bmi.*')">
                             BMI Calculator
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('ppi.index')" :active="route().current('ppi.*')">
+                            PPI Calculator
                         </ResponsiveNavLink>
                     </div>
 
