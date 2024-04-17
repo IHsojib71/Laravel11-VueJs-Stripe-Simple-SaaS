@@ -31,8 +31,10 @@ Route::middleware('auth')->group(function () {
     Route::get('ppi/index', [PpiCalculatorController::class, 'index'])->name('ppi.index');
     Route::post('ppi/calculate', [PpiCalculatorController::class, 'calculate'])->name('ppi.calculate');
 
-
     Route::get('credit/index',[CreditController::class, 'index'])->name('credit.index');
+    Route::post('credit/buy/{package}',[CreditController::class, 'buyCredits'])->name('credit.buy');
+    Route::get('credit/success',[CreditController::class, 'success'])->name('credit.success');
+    Route::get('credit/cancel',[CreditController::class, 'cancel'])->name('credit.cancel');
 });
-
+Route::get('credit/webhook', [CreditController::class, 'webhook'])->name('credit.webhook');
 require __DIR__.'/auth.php';

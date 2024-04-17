@@ -51,7 +51,7 @@ const showingNavigationDropdown = ref(false);
 
                             <p>{{ $page.props.auth.user.available_credits }} Credits</p>
                             </span>
-                            <Link href="/"
+                            <Link :href="route('credit.index')"
                             class="text-white py-1 px-3 mx-2 rounded border transition-colors hover:text-black hover:bg-white"
                             >Get More</Link>
                             <div class="ms-3 relative">

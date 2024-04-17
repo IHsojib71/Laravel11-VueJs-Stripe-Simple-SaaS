@@ -18,7 +18,6 @@ class CreditController extends Controller
     {
         $packages = Package::all();
         $features = Feature::where('active', true)->get();
-
         return inertia('Credit/Index', [
             'packages' => PackageResource::collection($packages),
             'features' => FeatureResource::collection($features),
@@ -31,7 +30,7 @@ class CreditController extends Controller
     {
             $stripe = new StripeClient(env('STRIPE_SECRET_KEY'));
 
-        $checkout_session = $stripe->checkout->sessions->create([
+            $checkout_session = $stripe->checkout->sessions->create([
             'line_items' => [
                 [
                     'price_data' => [
